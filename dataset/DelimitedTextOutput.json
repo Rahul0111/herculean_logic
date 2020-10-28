@@ -1,0 +1,61 @@
+{
+	"name": "DelimitedTextOutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragePOC",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output2",
+				"fileSystem": "ddcontainer1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "industry_code_ANZSIC",
+				"type": "String"
+			},
+			{
+				"name": "industry_name_ANZSIC",
+				"type": "String"
+			},
+			{
+				"name": "rme_size_grp",
+				"type": "String"
+			},
+			{
+				"name": "variable",
+				"type": "String"
+			},
+			{
+				"name": "value",
+				"type": "String"
+			},
+			{
+				"name": "unit",
+				"type": "String"
+			},
+			{
+				"name": "unit2",
+				"type": "String"
+			},
+			{
+				"name": "unit3",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
